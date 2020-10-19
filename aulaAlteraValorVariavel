@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class alteravlrvar {
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Digite o valor do produto: ");
+		Double vlrprod = scanner.nextDouble();
+		
+		System.out.print("Digite o tipo de pagaemnto (1 = a vista | 2 = a prazo): ");
+		Integer tipopgto = scanner.nextInt();
+		
+		Boolean pagtoAvista = tipopgto.equals(1);
+		Double juros = 0.0;;
+		
+		if (!pagtoAvista) {
+			juros = 10.0;
+		} 
+		
+		Double acrescimo = vlrprod * juros / 100;
+		Double total = vlrprod + acrescimo;
+		
+		System.out.println("Valor total: " + total);
+		
+		scanner.close();
+	}
+
+}
