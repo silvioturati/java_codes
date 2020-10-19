@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class notaProva {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Digite a nota da prova de matemática: ");
+		Integer notaMath = scanner.nextInt();
+		
+		System.out.print("Digite a nota da prova de português: ");
+		Integer notaPortu = scanner.nextInt();
+		
+		// testes
+		Boolean passouMath = notaMath >= 60;
+		Boolean passouPortu = notaPortu >= 60;
+		Boolean passou = (notaMath + notaPortu) >= 150;
+		
+		if (passouMath && passouPortu && passou) {
+			System.out.println("Você passou!");
+		} else {
+			System.out.println("Você não passou!");
+		}
+		
+		scanner.close();
+	}
+
+}
