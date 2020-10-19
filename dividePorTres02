@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class numerosDivideTres02 {
+	
+	static final Integer DIVISOR = 3;
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner (System.in);
+		
+		// perguntando para o usuário quantos numeros ele quer testar
+		System.out.println("Esse programa mostra quais números são divisiveis por 3 a partir de uma sequencia de numeros.");
+		System.out.print("Digite o número inteiro inicial: ");
+		Integer numeroInicial = scanner.nextInt();
+		System.out.print("Digite o número inteiro final:   ");
+		Integer numeroFinal = scanner.nextInt();
+		
+		// descobrindo o tamnho da lista
+		Integer tamanhoLista = numeroFinal - numeroInicial;
+		
+		// criando uma lista vazia com o numero de posições encontrado
+		Integer[] numeros = new Integer[tamanhoLista];
+		
+		// preenchendo a lista
+		System.out.println("Criando a lista de números!");
+		for (int i = 0; i < numeros.length; i++) {
+			numeros[i] = numeroInicial;
+			numeroInicial++;
+		}
+		
+		Integer total = 0;
+		
+		// testando os numeros
+		for (int n = 0; n < numeros.length; n++) {
+			Integer numero = numeros[n];
+			Integer dividdePorTres = numero % DIVISOR;
+			if (dividdePorTres.equals(0)) {
+				System.out.println("O número " + numero + " que está na posição " + n + " da lista é divisível por 3");
+				total++;
+			}
+		}
+		
+		System.out.println("Nesse intervalo foi encontrato " + total + " números divisiveis por 3");
+		
+		scanner.close();
+	}
+
+}
