@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class diaSemana {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Digite um número de 1 a 7:");
+		Integer numero = scanner.nextInt();
+		
+		String diaDaSemana = null;
+		
+		switch (numero) {
+		case 1: diaDaSemana = "Domingo";
+			break;
+		case 2: diaDaSemana = "Segunda";
+			break;
+		case 3: diaDaSemana = "Terça";
+			break;
+		case 4: diaDaSemana = "Quarta";
+			break;
+		case 5: diaDaSemana = "Quinta";
+			break;
+		case 6: diaDaSemana = "Sexta";
+			break;
+		case 7: diaDaSemana = "Sábado";
+			break;
+		default:
+			System.out.println("O número digitado não está entre 1 a 7");
+			System.exit(1);
+		}
+		
+		System.out.println("O dia da semana é " + diaDaSemana);
+		scanner.close();
+	}
+
+}
