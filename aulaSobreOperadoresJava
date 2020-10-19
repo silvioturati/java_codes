@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class operadoresMat {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Digite o numero 1: ");
+		final Float num1 = scanner.nextFloat();
+		System.out.print("Digite o numero 2: ");
+		final Float num2 = scanner.nextFloat();
+		
+		Float adicao = num1 + num2;
+		System.out.println("Resultado da adição (Float adicao = num1 + num2;):        " + adicao);
+		
+		Float subtracao = num1 - num2;
+		System.out.println("Resultado da adição (Float subtracao = num1 - num2;):     " + subtracao);
+		
+		Float divisao = num1 / num2;
+		System.out.println("Resultado da adição (Float divisao = num1 / num2;):       " + divisao);
+		
+		Float multiplicacao = num1 * num2;
+		System.out.println("Resultado da adição (Float multiplicacao = num1 * num2;): " + multiplicacao);
+		
+		Float modulo = num1 % num2;
+		System.out.println("Resultado da adição (Float modulo = num1 % num2;):        " + modulo);
+		
+		System.out.println("----------------------------------------------------------");
+		
+		// precedencia multiplicação, divisão, modulo depois soma, subtração
+		// no caso de mais de um, segue da esquerda para direita
+		
+		Float precedencia01 = num1 + num2 * 5;
+		System.out.println("Resultado da adição (Float precedencia01 = num1 + num2 * 5;)  : " + precedencia01);
+		Float precedencia02 = (num1 + num2) * 5;
+		System.out.println("Resultado da adição (Float precedencia02 = (num1 + num2) * 5;): " + precedencia02);
+		Float precedencia03 = num1 * num2 / 5;
+		System.out.println("Resultado da adição (Float precedencia03 = num1 * num2 / 5;):   " + precedencia03);
+		Float precedencia04 = (num1 * num2) / 5;
+		System.out.println("Resultado da adição (Float precedencia04 = (num1 * num2) / 5;): " + precedencia04);
+		
+		scanner.close();
+	}
+}
