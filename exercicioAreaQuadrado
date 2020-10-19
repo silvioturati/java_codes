@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class areaquadrado {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int x = 0;
+			
+			do {
+				System.out.print("Digite o tamnho da base em cm: ");
+				Double base = scanner.nextDouble();
+				int base1 = base.intValue();
+				
+				System.out.print("Digite o tamnho da altura em cm: ");
+				Double altura = scanner.nextDouble();
+				int altura1 = altura.intValue();
+				
+				Double area = base * altura;
+		
+				if (base1 == altura1) {
+					System.out.println("A forma é um quadrado e sua área é " + area + " centimetros quadrados");
+				} else {
+					System.out.println("A forma é um retangulo e sua área é " + area + " centimetros quadrados");
+				}
+				
+				System.out.println("Quer fazer outro calculo? (1 para sim) ");
+				int resposta = scanner.nextInt();
+				
+				if ( resposta == 1) {
+					x = 0;
+				} else {
+					x = 1;
+				}
+				
+			} while (x == 0);
+		
+		System.out.println("Obrigado por usar o sistema.");
+		scanner.close();
+
+	}
+}
