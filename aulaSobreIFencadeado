@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class usoIFencadeado {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		System.out.println("Digite o peso: ");
+		Double peso = scanner.nextDouble();
+		
+		Boolean pesoLeve = (peso > 0) && (peso <= 60);
+		Boolean pesoMedio = (peso > 60) && (peso <= 90);
+	    Boolean pesoPesado = peso > 90;
+		
+		if (pesoLeve) {
+			System.out.println("Peso Leve!");
+		} else if (pesoMedio) {
+			System.out.println("Peso Médio!");
+		} else if (pesoPesado) {
+			System.out.println("Pedo Pesado!");
+		} else {
+			System.out.println("Peso digitado está errado!");
+		}
+		
+		scanner.close();		
+	}
+}
