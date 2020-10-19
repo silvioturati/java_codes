@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class aplicaDesconto {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Digite o valor do produto: ");
+		Double vlrProd = scanner.nextDouble();
+		System.out.println("Digite a quantiade de itens: ");
+		Double qtdProd = scanner.nextDouble();
+		
+		Double subtotal = vlrProd * qtdProd;
+		
+		Boolean aplicaDesconto = qtdProd >= 10;
+		
+		Double Total;
+		
+		if (aplicaDesconto) {
+			Total = subtotal * 0.90;
+		} else {
+			Total = subtotal;
+		}
+		
+		System.out.println("O valor da compra é: " + Total);
+	}
+
+}
