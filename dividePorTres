@@ -1,0 +1,31 @@
+public class numerosDivideTres {
+	
+	static final Integer DIVISOR = 3;
+	
+	public static void main(String[] args) {
+
+// essa foi minha resolução		
+//		Integer[] numeros = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+//		
+//		for (int i = 0; i < 20; i++) {
+//			Integer numero = numeros[i] % 3;
+//			if (numero == 0) {
+//				System.out.println("O numero " + numeros[i] + " é divisivel por 3");
+//			}
+//		}
+
+// oque ficou feito foi a solução do professor
+		Integer[] numeros = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+		
+		for (int i = 0; i < numeros.length; i++) {
+			Integer numero = numeros[i];
+			Integer moduloPorTres = numero % DIVISOR;
+			
+			if (moduloPorTres.equals(0)) {
+				System.out.println("O numero " + numeros[i] + " é divisivel por 3");
+			}
+		}
+		
+	}
+
+}
