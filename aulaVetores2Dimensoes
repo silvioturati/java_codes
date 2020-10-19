@@ -1,0 +1,26 @@
+public class vetoresDoisDimensoes {
+	
+	public static void main(String[] args) {
+		
+		// variavel - apenas um valor
+		Double faturamentoDia = 10000.00;
+		
+		// vetor de uma dimensão
+		Double[] faturamentoJaneiro = new Double[] {10.0, 20.0, 30.0};
+		Double[] faturamentoFevereiro = new Double[] {40.0, 50.0, 60.0};		
+		
+		// vetor de duas dimensões
+		Double[][] faturamentoAnual = new Double[][] {faturamentoJaneiro, faturamentoFevereiro};
+		
+//		System.out.println("Faturamento 1 de Janeiro: " + faturamentoAnual[0][0]);
+		
+		for (int i = 0; i < faturamentoAnual.length; i++) {
+			System.out.println("Mes: " + (i+1));
+			
+			for (int n = 0; n < faturamentoAnual[i].length; n++) {
+				Double dia = faturamentoAnual[i][n];
+				System.out.println("Dia " + (n+1) + ":" + dia);
+			}
+		}
+	}
+}
