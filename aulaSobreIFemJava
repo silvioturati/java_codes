@@ -1,0 +1,16 @@
+public class estruturaSE {
+	
+	public static void main(String[] args) {
+		Boolean movimentaMetadeValor = true;
+		Boolean contaTempoSuficiente = true;
+		Boolean nomeLimpo = true;
+		
+		Boolean liberaEmprestimo = movimentaMetadeValor && contaTempoSuficiente && nomeLimpo;
+		
+		if (liberaEmprestimo) {
+			System.out.println("Pode liberar o empréstimo!");
+		} else {
+			System.out.println("Não pode liberar o empréstimo!");
+		}	
+	}
+}
