@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class constantes {
+
+	static final Integer IDADE_MINIMA_CNH = 18; // DECLARANDO VARIAVEL ESTATICA
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		Integer contador = 0;
+		do {		
+			System.out.print("Digite seu nome: ");
+			String nome = scanner.nextLine();
+		
+			System.out.print("Digite sua idade: ");
+			Integer idade = scanner.nextInt();
+				
+			Boolean podeTirar = idade >= IDADE_MINIMA_CNH;
+			
+			if (podeTirar) {
+					System.out.println(nome + ", você têm " + idade + " anos e pode tirar CNH no Brasil. Também têm idade para trabalhar, então vai trabalhar!");
+			} else if (idade < 0) {
+					System.out.println(nome + ", você existe mesmo? Palhaço, digite certo!");
+			} else {
+					System.out.println(nome + " você têm " + idade + " anos e não pode tirar CNH no Brasil, mas não se preocupe o Brasil é, e sempre será, o país do futuro!");
+			}
+			
+			System.out.print("Quer refazer a pesquisa? (1 para sim): ");
+			Integer resposta = scanner.nextInt();
+			
+			if (resposta != 1) {
+				contador++;
+			} 
+					
+		} while (contador == 0);
+		
+		System.out.println("Obrigado por usar o sistema!");
+		scanner.close();
+	}
+}
