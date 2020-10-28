@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ExercicioDaTabuada {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Digite o numero e nós fazemos a tabuada pra vc: ");
+		Integer numero = scanner.nextInt();
+		
+		calculaTabuada(numero);
+		
+		scanner.close();
+	}
+
+	static void calculaTabuada(Integer tabuada) {
+		Integer resultado = 0;
+		for (int i = 0; i <=10; i++) {
+			resultado = tabuada * i;
+			System.out.println(tabuada + " x " + i + " = " + resultado);
+		}
+	}
+}
